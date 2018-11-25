@@ -9,3 +9,5 @@ dist
 
 # h5 dev文件
 .temp 
+
+.DS_Store
