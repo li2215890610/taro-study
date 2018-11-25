@@ -17,20 +17,23 @@ import './index.scss'
 //
 // #endregion
 
+// 指定 redux 导出数据及数据类型检查
 type PageStateProps = {
   counter: {
     num: number
   }
 }
-
+// 指定 actions 导出方法
 type PageDispatchProps = {
   add: () => void
   dec: () => void
   asyncAdd: () => any
 }
 
+// 指定 父组件传入的数据声明及数据类型检查
 type PageOwnProps = {}
 
+// 指定 组件内部state数据类型检查
 type PageState = {}
 
 type IProps = PageStateProps & PageDispatchProps & PageOwnProps
@@ -39,9 +42,11 @@ interface Index {
   props: IProps;
 }
 
+// 定义连接 redux 
 @connect(({ counter }) => ({
   counter
 }), (dispatch) => ({
+  // 注入方法（ps：action ）
   add () {
     dispatch(add())
   },
