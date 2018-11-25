@@ -1,5 +1,5 @@
 const config = {
-  projectName: 'myApp',
+  projectName: 'taroStudy',
   date: '2018-11-25',
   designWidth: 750,
   deviceRatio: {
@@ -67,6 +67,9 @@ const config = {
           enable: true
         }
       }
+    },
+    devServer:{
+      port: 9999
     }
   }
 }
