@@ -1,6 +1,7 @@
 import {
   ADD,
-  MINUS
+  MINUS,
+  ASYNC
 } from '../constants/counter'
 
 export const add = () => {
@@ -16,9 +17,7 @@ export const minus = () => {
 
 // 异步的action
 export function asyncAdd () {
-  return dispatch => {
-    setTimeout(() => {
-      dispatch(add())
-    }, 2000)
+  return {
+    type: ASYNC
   }
 }

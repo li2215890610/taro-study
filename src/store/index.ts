@@ -1,13 +1,16 @@
 import { createStore, applyMiddleware } from 'redux'
 
-
-import thunkMiddleware from 'redux-thunk'
-
+import  createSagaMiddleware from "redux-saga";
 
 import rootReducer from '../reducers'
 
+import counterSagas from "../sagas/counter";
+
+
+const sagaMiddleware = createSagaMiddleware()
+
 const middlewares = [
-  thunkMiddleware
+  sagaMiddleware
 ]
 
 if (process.env.NODE_ENV === 'development') {
@@ -16,5 +19,8 @@ if (process.env.NODE_ENV === 'development') {
 
 export default function configStore () {
   const store = createStore(rootReducer, applyMiddleware(...middlewares))
+
+  sagaMiddleware.run(counterSagas)
+
   return store
 }
