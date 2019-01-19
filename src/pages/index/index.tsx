@@ -3,7 +3,7 @@ import Taro, { Component, Config } from '@tarojs/taro'
 import { View, Button, Text } from '@tarojs/components'
 import { connect } from '@tarojs/redux'
 
-import { add, minus, asyncAdd } from '../../actions/counter'
+import { login } from '../../actions/user-info'
 
 import './index.scss'
 
@@ -23,11 +23,10 @@ type PageStateProps = {
     num: number
   }
 }
+
 // 指定 actions 导出方法
 type PageDispatchProps = {
-  add: () => void
-  dec: () => void
-  asyncAdd: () => any
+  login: () => void
 }
 
 // 指定 父组件传入的数据声明及数据类型检查
@@ -47,16 +46,11 @@ interface Index {
   counter
 }), (dispatch) => ({
   // 注入方法（ps：action ）
-  add () {
-    dispatch(add())
+  login () {
+    dispatch(login())
   },
-  dec () {
-    dispatch(minus())
-  },
-  asyncAdd () {
-    dispatch(asyncAdd())
-  }
 }))
+
 class Index extends Component {
 
     /**

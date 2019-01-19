@@ -1,17 +1,29 @@
 import { call, put, takeEvery, takeLatest, select } from 'redux-saga/effects'
 
-import { ASYNC } from "../constants/counter";
+import Taro from '@tarojs/taro';
 
-// import Api from '../servers/counter'
+import userRequest from '../servers/user-info'
+
+// import { ASYNC } from "../constants/counter";
 
 // worker Saga : 将在 USER_FETCH_REQUESTED action 被 dispatch 时调用
-function* fetchUser(action) {
-  //  try {
-  //     const user = yield call(Api.fetchUser, action.payload.userId);
-  //     yield put({type: "USER_FETCH_SUCCEEDED", user: user});
-  //  } catch (e) {
-  //     yield put({type: "USER_FETCH_FAILED", message: e.message});
-  //  }
+function* logon(action) {
+   try {
+
+      const getCodeResult = yield Taro.login();
+
+      const user = yield call(userRequest.requestLogin, {
+        payload:{
+          code: getCodeResult.code
+        }
+      },{});
+
+      // yield put({type: "USER_FETCH_SUCCEEDED", user: user});
+
+   } catch (e) {
+
+      // yield put({type: "USER_FETCH_FAILED", message: e.message});
+   }
   debugger
 }
 
@@ -25,14 +37,14 @@ function* Counter() {
   那么处理中的 action 会被取消，只会执行当前的
 */
 
-  yield takeLatest("ASYNC", fetchUser);
+  yield takeLatest("ASYNC", logon);
 
   /*
     在每个 `USER_FETCH_REQUESTED` action 被 dispatch 时调用 fetchUser
     允许并发（译注：即同时处理多个相同的 action）
   */
 
-  yield takeEvery("USER_FETCH_REQUESTED", fetchUser);
+  yield takeEvery("USER_FETCH_REQUESTED", logon);
 
 }
 
