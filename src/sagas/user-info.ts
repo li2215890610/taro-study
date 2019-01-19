@@ -4,7 +4,7 @@ import Taro from '@tarojs/taro';
 
 import userRequest from '../servers/user-info'
 
-// import { ASYNC } from "../constants/counter";
+import { LOGIN_REQUESTED } from "../constants/user-info";
 
 // worker Saga : 将在 USER_FETCH_REQUESTED action 被 dispatch 时调用
 function* logon(action) {
@@ -37,7 +37,7 @@ function* Counter() {
   那么处理中的 action 会被取消，只会执行当前的
 */
 
-  yield takeLatest("ASYNC", logon);
+  yield takeLatest(LOGIN_REQUESTED, logon);
 
   /*
     在每个 `USER_FETCH_REQUESTED` action 被 dispatch 时调用 fetchUser

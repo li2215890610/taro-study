@@ -63,7 +63,9 @@ class Index extends Component {
     config: Config = {
     navigationBarTitleText: '首页'
   }
-
+  componentDidMount = ()=>{
+    this.props.login()
+  }
   componentWillReceiveProps (nextProps) {
     console.log(this.props, nextProps)
   }
