@@ -1,0 +1,37 @@
+
+.item_box{
+  padding: 30px 10px 30px 30px;
+}
+
+.head_img_box{
+  min-width: 96px;
+  max-width: 96px;
+}
+.head_img{
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+}
+.item_name,.head_title{
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 30px;
+}
+.head_title{
+  padding-left: 0;
+  font-size: 32px;
+}
+
+.iconfont{
+  font-weight: bold;
+}
+.user_info--btn{
+  width: 300px;
+  font-size: 36px !important;
+  line-height: 90px;
+  border-radius: 10px;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 40px;
+  margin-bottom: 60px;
+}
