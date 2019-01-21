@@ -1,14 +1,8 @@
-node_modules
-
-.vscode
-
-yarn.lock
-
-#编译之后不同的代码包
-dist
-
-# h5 dev文件
-.temp 
-
+dist/
+.temp/
+.rn_temp/
+node_modules/
 .DS_Store
 
+package-lock.json
+yarn.lock
