@@ -1,8 +1,12 @@
-import { ComponentClass } from 'react'
-import Taro, { PureComponent } from '@tarojs/taro'
-import { View } from '@tarojs/components'
+import { ComponentClass } from 'react';
+
+import Taro, { PureComponent } from '@tarojs/taro';
+
+import { View } from '@tarojs/components';
+
 import { AtIcon, AtButton } from 'taro-ui';
-import './empty-page.scss'
+
+import './empty-page.scss';
 
 type PageOwnProps = {
   tip: string,

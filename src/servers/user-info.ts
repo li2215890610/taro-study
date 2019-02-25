@@ -1,8 +1,9 @@
 import { user } from './url-config';
+
 import requstHttp from './request-http';
 
 export default {
-  requestLogin: ({ payload}, account) => {
+  getUserInfoRequest: ({ payload}, account) => {
     return requstHttp({
       url: `${user.login}`,
       method: 'POST',
@@ -11,7 +12,25 @@ export default {
         'Content-Type': 'application/x-www-form-urlencoded'
       },
       data: {
-        code: payload.code
+        ...payload,
+        ...account
+      },
+    })
+      .then((data) => {
+        return data;
+      });
+  },
+  setUpdateUserInfoRequest: ({ payload}, account) => {
+    return requstHttp({
+      url: `${user.login}`,
+      method: 'POST',
+      header: {
+        Authorization: account.token || '',
+        'Content-Type': 'application/x-www-form-urlencoded'
+      },
+      data: {
+        ...payload,
+        ...account
       },
     })
       .then((data) => {

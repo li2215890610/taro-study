@@ -1,6 +1,9 @@
 import { ComponentClass } from 'react';
+
 import Taro, { PureComponent } from "@tarojs/taro";
-import { View } from "@tarojs/components"
+
+import { View } from "@tarojs/components";
+
 import "./bottom-tip.scss";
 
 type BottomTipOwnProps = {

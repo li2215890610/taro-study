@@ -1,12 +1,12 @@
-import { ComponentClass } from 'react'
+import { ComponentClass } from 'react';
 
-import Taro, { Component } from '@tarojs/taro'
+import Taro, { Component } from '@tarojs/taro';
 
-import { View } from '@tarojs/components'
+import { View } from '@tarojs/components';
 
-import { AtButton } from 'taro-ui'
+import { AtButton } from 'taro-ui';
 
-import  './public-bottom-btn.scss'
+import  './public-bottom-btn.scss';
 
 type PublicBottomBtnPageStateProps = {
   

@@ -1,26 +1,27 @@
-import { LOGIN_FAILED, LOGIN_REQUESTED, LOGIN_SUCCEEDED} from '../constants/user-info'
+import { 
+  GET_USER_INFO_FAILED, 
+  GET_USER_INFO_REQUESTED, 
+  GET_USER_INFO_SUCCEEDED,
+} from '../constants/user-info';
 
-import { login } from "../types/login";
-
-const INITIAL_STATE: login = {
-  openid: "",
-  token: "",
+const INITIAL_STATE = {
+  
 }
 
-export default function login (state = INITIAL_STATE, action) {
+export default function userInfo (state = INITIAL_STATE, action) {
   switch (action.type) {
 
-    case LOGIN_REQUESTED:
+    case GET_USER_INFO_REQUESTED:
       return {
         ...state,
       }
 
-     case LOGIN_SUCCEEDED:
+     case GET_USER_INFO_SUCCEEDED:
        return {
          ...state,
        }
 
-     case LOGIN_FAILED:
+     case GET_USER_INFO_FAILED:
        return {
 
       }

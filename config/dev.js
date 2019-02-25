@@ -4,6 +4,25 @@ module.exports = {
   },
   defineConstants: {
   },
-  weapp: {},
-  h5: {}
+  weapp: {
+    module: {
+      postcss: {
+        // 小程序端样式引用本地资源内联
+        url: {
+          enable: true,
+          limit: 102400000000
+        }
+      }
+    }
+  },
+  h5: {
+    module: {
+      postcss: {
+        url: {
+          enable: true,
+          limit: 102400000000
+        }
+      }
+    }
+  }
 }

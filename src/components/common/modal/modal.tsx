@@ -1,8 +1,12 @@
 import { ComponentClass } from 'react';
+
 import Taro, { PureComponent } from '@tarojs/taro';
+
 import { View } from '@tarojs/components'
-import './modal.scss';
+
 import { AtIcon } from 'taro-ui';
+
+import './Modal.scss';
 
 type ModalOwnProps = {
   title?: string,

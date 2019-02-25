@@ -1,12 +1,16 @@
-import '@tarojs/async-await'
-import Taro, { Component, Config } from '@tarojs/taro'
-import { Provider } from '@tarojs/redux'
+import '@tarojs/async-await';
 
-import Index from './pages/index'
+import Taro, { Component, Config } from '@tarojs/taro';
 
-import configStore from './store'
+import { Provider } from '@tarojs/redux';
 
-import './app.scss'
+import Index from './pages/index';
+
+import configStore from './store';
+
+import "./iconfonts/iconfonts.css";//iconfont icon-qrcode 使用方式
+
+import './app.scss';
 
 // 如果需要在 h5 环境中开启 React Devtools
 // 取消以下注释：

@@ -1,12 +1,12 @@
-import { ComponentClass } from 'react'
+import { ComponentClass } from 'react';
 
-import Taro, { Component } from '@tarojs/taro'
+import Taro, { Component } from '@tarojs/taro';
 
-import { View, Button, Image} from '@tarojs/components'
+import { View, Button, Image} from '@tarojs/components';
 
-import './user-info.scss'
+import { AtIcon } from 'taro-ui';
 
-import { AtIcon } from 'taro-ui'
+import './user-info.scss';
 
 
 type UserInfoPageStateProps = {

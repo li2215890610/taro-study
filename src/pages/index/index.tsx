@@ -1,11 +1,12 @@
-import { ComponentClass } from 'react'
-import Taro, { Component, Config } from '@tarojs/taro'
-import { View, Button, Text } from '@tarojs/components'
-import { connect } from '@tarojs/redux'
+import { ComponentClass } from 'react';
 
-import { login } from '../../actions/user-info'
+import Taro, { Component, Config } from '@tarojs/taro';
 
-import './index.scss'
+import { View, Text } from '@tarojs/components';
+
+import { connect } from '@tarojs/redux';
+
+import './index.scss';
 
 // #region 书写注意
 // 
@@ -26,7 +27,7 @@ type PageStateProps = {
 
 // 指定 actions 导出方法
 type PageDispatchProps = {
-  login: () => void
+  // login: () => void
 }
 
 // 指定 父组件传入的数据声明及数据类型检查
@@ -42,13 +43,13 @@ interface Index {
 }
 
 // 定义连接 redux 
-@connect(({ counter }) => ({
-  counter
+@connect(({  }) => ({
+  
 }), (dispatch) => ({
   // 注入方法（ps：action ）
-  login () {
-    dispatch(login())
-  },
+  // login () {
+  //   dispatch(login())
+  // },
 }))
 
 class Index extends Component {
@@ -64,8 +65,9 @@ class Index extends Component {
     navigationBarTitleText: '首页'
   }
   componentDidMount = ()=>{
-    this.props.login()
+
   }
+
   componentWillReceiveProps (nextProps) {
     console.log(this.props, nextProps)
   }
@@ -79,10 +81,6 @@ class Index extends Component {
   render () {
     return (
       <View className='index'>
-        <Button className='add_btn' onClick={this.props.add}>+</Button>
-        <Button className='dec_btn' onClick={this.props.dec}>-</Button>
-        <Button className='dec_btn' onClick={this.props.asyncAdd}>async</Button>
-        <View><Text>{this.props.counter.num}</Text></View>
         <View><Text>Hello, World</Text></View>
       </View>
     )

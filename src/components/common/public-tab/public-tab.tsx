@@ -1,10 +1,10 @@
-import { ComponentClass } from 'react'
+import { ComponentClass } from 'react';
 
-import Taro, { Component } from '@tarojs/taro'
+import Taro, { Component } from '@tarojs/taro';
 
-import { View} from '@tarojs/components'
+import { View} from '@tarojs/components';
 
-import { AtTabs } from 'taro-ui'
+import { AtTabs } from 'taro-ui';
 
 type PublicTabPageStateProps = {
 
