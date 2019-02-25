@@ -16,13 +16,13 @@ module.exports = {
     }
   },
   h5: {
-    module: {
-      postcss: {
-        url: {
-          enable: true,
-          limit: 102400000000
-        }
-      }
+    // https://nervjs.github.io/taro/docs/config-detail.html
+    router: {
+      mode: 'browser', // 或者是 "hash"
+      // customRoutes: { // 自定义路由名称
+      //   '/pages/index/index': '/index',
+      //   '/pages/home/home': '/home',
+      // }
     }
   }
 }

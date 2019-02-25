@@ -2,11 +2,11 @@ import { ComponentClass } from 'react';
 
 import Taro, { Component, Config } from '@tarojs/taro';
 
-import { View, Text, Button } from '@tarojs/components';
+import { View, Text } from '@tarojs/components';
 
 import { connect } from '@tarojs/redux';
 
-import './index.scss';
+import './home.scss';
 
 // #region 书写注意
 // 
@@ -38,7 +38,7 @@ type PageState = {}
 
 type IProps = PageStateProps & PageDispatchProps & PageOwnProps
 
-interface Index {
+interface Home {
   props: IProps;
 }
 
@@ -52,7 +52,7 @@ interface Index {
   // },
 }))
 
-class Index extends Component {
+class Home extends Component {
 
     /**
    * 指定config的类型声明为: Taro.Config
@@ -78,15 +78,10 @@ class Index extends Component {
 
   componentDidHide () { }
 
-  onClick = ()=>{
-    Taro.navigateTo({ url: '/pages/home/home' })
-  }
   render () {
     return (
-      <View className='index'>
-        <View><Text>Hello, World</Text></View>
-        <View className='ssss'>sssssss</View>
-        <Button onClick={this.onClick}>跳转</Button>
+      <View>
+        <View>home</View>
       </View>
     )
   }
@@ -99,4 +94,4 @@ class Index extends Component {
 //
 // #endregion
 
-export default Index as ComponentClass<PageOwnProps, PageState>
+export default Home as ComponentClass<PageOwnProps, PageState>
