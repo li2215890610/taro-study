@@ -8,7 +8,7 @@ import Index from './pages/index';
 
 import configStore from './store';
 
-// import "./iconfonts/iconfonts.css";//iconfont icon-qrcode 使用方式
+import "./iconfonts/iconfonts.css";//iconfont icon-qrcode 使用方式
 
 import './app.scss';
 

@@ -82,6 +82,7 @@ class Home extends Component {
     return (
       <View>
         <View>home</View>
+        <View className='iconfont icon-qrcode'></View>
       </View>
     )
   }
