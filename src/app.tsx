@@ -31,8 +31,8 @@ class App extends Component {
    */
   config: Config = {
     pages: [
+      'pages/word/word',
       'pages/index/index',
-      'pages/home/home',
     ],
     window: {
       backgroundTextStyle: 'light',
@@ -47,7 +47,7 @@ class App extends Component {
       "backgroundColor": "#ffffff",
       "list": [
         {
-          "pagePath": "pages/index/index",
+          "pagePath": "pages/word/word",
           "text": "段子",
           "iconPath": "images/wordN.png",
           "selectedIconPath": "images/wordS.png"
@@ -59,13 +59,13 @@ class App extends Component {
           "selectedIconPath": "images/imageS.png"
         },
         {
-          "pagePath": "pages/home/home",
+          "pagePath": "pages/word/word",
           "text": "声音",
           "iconPath": "images/voiceN.png",
           "selectedIconPath": "images/voiceS.png"
         },
         {
-          "pagePath": "pages/home/home",
+          "pagePath": "pages/word/word",
           "text": "视频",
           "iconPath": "images/videoN.png",
           "selectedIconPath": "images/videoS.png"

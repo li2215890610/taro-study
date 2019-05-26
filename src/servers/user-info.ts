@@ -1,6 +1,6 @@
 import { user } from './url-config';
 
-import requstHttp from './request-http';
+import requstHttp from './public-request-http';
 
 export default {
   getUserInfoRequest: ({ payload}, account) => {

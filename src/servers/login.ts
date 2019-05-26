@@ -1,6 +1,6 @@
 import { user } from './url-config';
 
-import requstAgent from './request-http';
+import requstAgent from './public-request-http';
 
 export default {
   requestLogin: (payload, account) => {

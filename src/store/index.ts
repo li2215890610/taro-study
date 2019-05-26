@@ -8,6 +8,9 @@ import loginSagas from "../sagas/login";
 
 import userInfoSagas from "../sagas/user-info";
 
+import wordSagas from "../sagas/word";
+
+
 const sagaMiddleware = createSagaMiddleware();
 
 const middlewares = [
@@ -23,6 +26,7 @@ export default function configStore () {
 
   sagaMiddleware.run(loginSagas)
   sagaMiddleware.run(userInfoSagas)
+  sagaMiddleware.run(wordSagas)
 
   return store
 }

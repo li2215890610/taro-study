@@ -12,6 +12,7 @@ type RequestOptions = {
 }
 
 type resolve_promise = any;
+
 type reject_promise = any;
 
 export default function requestAgent(options: RequestOptions) {
@@ -23,17 +24,11 @@ export default function requestAgent(options: RequestOptions) {
       header: options.header,
       dataType: 'json'
     }).then((data) => {
-      if (data.statusCode === 403 || data.statusCode === 401) {
-        return
-      } else if (data.statusCode !== 200){
+      
+     if (data.statusCode !== 200){
         reject(data.data)
-      }else if (data && data.data) {
-        if (data.data.errno === 0) {
-          resolve( data.data.data );
-        }
-        else {
-          reject(new Error(data.data.errmsg))
-        }
+      }else if (data.statusCode === 200 && data && data.data ) {
+        resolve( data.data );
       } else {
         reject(new Error('网络超时'))
       }
