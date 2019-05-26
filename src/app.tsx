@@ -39,22 +39,54 @@ class App extends Component {
       navigationBarBackgroundColor: '#fff',
       navigationBarTitleText: 'WeChat',
       navigationBarTextStyle: 'black'
-    }
+    },
+    tabBar: {
+      "color": "#a9b7b7",
+      "selectedColor": "#eb4f38",
+      "borderStyle": "white",
+      "backgroundColor": "#ffffff",
+      "list": [
+        {
+          "pagePath": "pages/index/index",
+          "text": "段子",
+          "iconPath": "images/wordN.png",
+          "selectedIconPath": "images/wordS.png"
+        },
+        {
+          "pagePath": "pages/index/index",
+          "text": "图片",
+          "iconPath": "images/imageN.png",
+          "selectedIconPath": "images/imageS.png"
+        },
+        {
+          "pagePath": "pages/home/home",
+          "text": "声音",
+          "iconPath": "images/voiceN.png",
+          "selectedIconPath": "images/voiceS.png"
+        },
+        {
+          "pagePath": "pages/home/home",
+          "text": "视频",
+          "iconPath": "images/videoN.png",
+          "selectedIconPath": "images/videoS.png"
+        }
+      ]
+    },
   }
 
-  componentDidMount () {}
+  componentDidMount() { }
 
-  componentDidShow () {}
+  componentDidShow() { }
 
-  componentDidHide () {}
+  componentDidHide() { }
 
-  componentCatchError () {}
+  componentCatchError() { }
 
-  componentDidCatchError () {}
+  componentDidCatchError() { }
 
   // 在 App 类中的 render() 函数没有实际作用
   // 请勿修改此函数
-  render () {
+  render() {
     return (
       <Provider store={store}>
         <Index />
