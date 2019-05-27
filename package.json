@@ -1,8 +1,8 @@
 {
-	"name": "taroStudy",
+	"name": "taro_study",
 	"version": "1.0.0",
 	"private": true,
-	"description": "taroStudy",
+	"description": "taro_study",
 	"scripts": {
 		"build:weapp": "taro build --type weapp",
 		"build:swan": "taro build --type swan",
