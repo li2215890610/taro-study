@@ -1,17 +1,14 @@
 import { ComponentClass } from 'react';
-
 import Taro, { Component } from '@tarojs/taro';
-
-import { View, } from '@tarojs/components';
-
+import { View, Text, Image } from '@tarojs/components';
 import { AtButton, AtActivityIndicator } from "taro-ui";
-
-import { BottomTip, EmptyPage} from "../../index";
-
+import { BottomTip, EmptyPage } from "../../index";
 import { getWordList } from "../../../actions/word";
-
 import { connect } from '@tarojs/redux';
-
+import CaiPng from "../../../images/cai.png";
+import SharePng from "../../../images/share.png";
+import CommentPng from "../../../images/comment.png";
+import DingPng from "../../../images/ding.png";
 import './list.scss';
 
 type ListStateProps = {
@@ -73,6 +70,45 @@ class List extends Component {
       <View>
 
         {
+          list && list.map((item, index) => {
+            return <View  key={index}>
+              <View className="divLine"></View>
+
+              <View className="containsView">
+                <View className="topContainsView">
+                  {
+                    item.profile_image && <Image className="profileImage" src={item.profile_image} />
+                  }
+                  <View className="topRightView">
+                    <Text className="topRightName">{item.name}</Text>
+                    <Text className="topRightTime">{item.passtime}</Text>
+                  </View>
+                </View>
+                <Text className="centerContent">{item.text}</Text>
+                <View className="bottomView">
+                  <View className="bottomItemView">
+                    <Image className="bottomItemImage" src={DingPng} />
+                    <Text className="bottomItemText">{item.ding}</Text>
+                  </View>
+                  <View className="bottomItemView">
+                    <Image className="bottomItemImage" src={CaiPng} />
+                    <Text className="bottomItemText">{item.cai}</Text>
+                  </View>
+                  <View className="bottomItemView">
+                    <Image className="bottomItemImage" src={SharePng} />
+                    <Text className="bottomItemText">{item.repost}</Text>
+                  </View>
+                  <View className="bottomItemView">
+                    <Image className="bottomItemImage" src={CommentPng} />
+                    <Text className="bottomItemText">{item.comment}</Text>
+                  </View>
+                </View>
+              </View>
+            </View>
+          })
+        }
+
+        {
           ing && page === 1 && list.length === 0 &&
           <AtActivityIndicator
             color="#333333"
@@ -113,12 +149,13 @@ class List extends Component {
               onClick={this.handleClickRetry}
               type="secondary"
               size="small"
+              className
             >加载失败，点击重试
             </AtButton>
           </View>
         }
 
-      </View>
+      </View >
     );
   }
 
