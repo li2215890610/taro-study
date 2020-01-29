@@ -3,6 +3,8 @@ dist/
 .rn_temp/
 node_modules/
 .DS_Store
+deploy_versions/
+
 
 package-lock.json
 yarn.lock
