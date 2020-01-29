@@ -4,7 +4,7 @@ module.exports = {
   },
   defineConstants: {
   },
-  weapp: {
+  mini: {
     module: {
       postcss: {
         // 小程序端样式引用本地资源内联

@@ -1,7 +1,7 @@
 {
   "miniprogramRoot": "./dist",
-  "projectname": "taroStudy",
-  "description": "taroStudy",
+  "projectname": "taro-study",
+  "description": "学习",
   "appid": "touristappid",
   "setting": {
     "urlCheck": true,
@@ -11,6 +11,3 @@
   },
   "compileType": "miniprogram"
 }
-
-
-

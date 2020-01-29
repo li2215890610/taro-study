@@ -21,9 +21,7 @@ export function* login() {
   }
 }
 
-function* loginSaga() {
+export default function* loginSaga() {
 
   yield takeLatest('LOGIN_REQUESTED', login);
 }
-
-export default loginSaga;

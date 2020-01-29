@@ -55,7 +55,7 @@ class Word extends Component {
     enablePullDownRefresh: false,
   }
 
-  componentDidMount = ()=>{
+  componentDidMount(){
     // page: (this.props.page),
     this.getWordList({
       a: 'newlist',

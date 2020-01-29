@@ -10,7 +10,6 @@ import userInfoSagas from "../sagas/user-info";
 
 import wordSagas from "../sagas/word";
 
-
 const sagaMiddleware = createSagaMiddleware();
 
 const middlewares = [

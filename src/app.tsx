@@ -1,5 +1,3 @@
-import '@tarojs/async-await';
-
 import Taro, { Component, Config } from '@tarojs/taro';
 
 import { Provider } from '@tarojs/redux';
@@ -74,7 +72,9 @@ class App extends Component {
     },
   }
 
-  componentDidMount() { }
+  componentDidMount() { 
+
+  }
 
   componentDidShow() { }
 
